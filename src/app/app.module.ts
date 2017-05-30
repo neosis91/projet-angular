@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TvmazeService } from './services/tvmaze.service';
+import { HttpTestComponent } from './http-test/http-test.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HttpTestComponent
   ],
   imports: [
     BrowserModule,
