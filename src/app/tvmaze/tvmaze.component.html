@@ -1,21 +1,21 @@
-<button (click)="getQueryShow()"> Test get query show </button>
-
-<h1>Movie Search</h1>
-<form id="searchForm" method="post">
-    <fieldset>
-        <input id="s" [(ngModel)]="searchKey" (keyup.enter)="DoSearch()" placeholder="Type here..." [ngModelOptions]="{standalone: true}"/>
-        <button (click)="DoSearch()"> Find </button>
-    </fieldset>
-</form>
-
+<header>
+  <form id="searchForm" method="post">
+    <input id="s" [(ngModel)]="searchKey" (keyup.enter)="DoSearch()" placeholder="Type here..." [ngModelOptions]="{standalone: true}"/>
+    <button (click)="DoSearch()"> Find </button>
+  </form>
+</header>
 
 <ul>
   <li *ngFor="let oneData of getData">
-    <img src="{{oneData.show.image.medium}}">
-    <h2>{{oneData.show.name}}</h2>
-    <span>Note: {{oneData.show.rating}}</span>
-    <span>{{oneData.show.summary}}</span>
+    <div class="background-search" *ngIf="oneData.show.id">
+      <div class="imageData">
+        <img class="oneDataImage" src="{{oneData.show.image.medium}}">
+      </div>
+      <div class="oneDataInfo">
+        <h2 id="{{oneData.show.id}}">{{oneData.show.name}}</h2>
+        <span *ngIf="oneData.show.rating.average">Note: {{oneData.show.rating.average}}</span>
+        <div>{{oneData.show.summary }}</div>
+      </div>
+    </div>
   </li>
 </ul>
-
-<p> Output : {{ getData}}</p>
