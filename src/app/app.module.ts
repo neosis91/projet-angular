@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { TvmazeService } from './services/tvmaze.service';
+import { TvmazeService } from './tvmaze.service';
 import { HttpTestComponent } from './http-test/http-test.component';
+import { TvmazeComponent } from './tvmaze/tvmaze.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HttpTestComponent
+    HttpTestComponent,
+    TvmazeComponent
   ],
   imports: [
     BrowserModule,
