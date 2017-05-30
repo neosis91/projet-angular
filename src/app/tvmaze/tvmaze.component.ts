@@ -9,6 +9,7 @@ import {TvmazeService} from '../tvmaze.service';
 })
 export class TvmazeComponent  {
   getData: string;
+  searchKey: string;
 
   constructor(private _TvmazeService: TvmazeService) {
   }
@@ -19,5 +20,14 @@ export class TvmazeComponent  {
         error => alert(error),
         () => console.log('success')
       );
+  }
+
+  DoSearch() {
+    this._TvmazeService.SearchMovie(this.searchKey) .subscribe(
+        data => this.getData = JSON.stringify(data),
+        error => alert(error),
+        () => console.log('success')
+    );
+
   }
 }

@@ -1,2 +1,11 @@
 <button (click)="getQueryShow()"> Test get query show </button>
+
+<h1>Movie Search</h1>
+<form id="searchForm" method="post">
+    <fieldset>
+        <input id="s" [(ngModel)]="searchKey" (keyup.enter)="DoSearch()" placeholder="Type here..." [ngModelOptions]="{standalone: true}"/>
+        <button (click)="DoSearch()"> Find </button>
+    </fieldset>
+</form>
+
 <p> Output : {{ getData}}</p>
