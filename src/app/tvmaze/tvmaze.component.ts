@@ -24,10 +24,9 @@ export class TvmazeComponent  {
 
   DoSearch() {
     this._TvmazeService.SearchMovie(this.searchKey) .subscribe(
-        data => this.getData = JSON.stringify(data),
+        data => this.getData = data,
         error => alert(error),
         () => console.log('success')
     );
-
   }
 }

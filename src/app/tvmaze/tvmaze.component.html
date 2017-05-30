@@ -8,4 +8,14 @@
     </fieldset>
 </form>
 
+
+<ul>
+  <li *ngFor="let oneData of getData">
+    <img src="{{oneData.show.image.medium}}">
+    <h2>{{oneData.show.name}}</h2>
+    <span>Note: {{oneData.show.rating}}</span>
+    <span>{{oneData.show.summary}}</span>
+  </li>
+</ul>
+
 <p> Output : {{ getData}}</p>
