@@ -8,7 +8,7 @@ import { TvmazeService } from './tvmaze.service';
 import { HttpTestComponent } from './http-test/http-test.component';
 import { TvmazeComponent } from './tvmaze/tvmaze.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdToolbarModule} from '@angular/material';
+import {MdButtonModule, MdToolbarModule, MdInputModule, MdCardModule, MdGridListModule} from '@angular/material';
 
 
 @NgModule({
@@ -22,7 +22,7 @@ import {MdButtonModule, MdToolbarModule} from '@angular/material';
     FormsModule,
     HttpModule,
     [BrowserAnimationsModule],
-    [MdButtonModule, MdToolbarModule]
+    [MdButtonModule, MdToolbarModule, MdInputModule, MdCardModule, MdGridListModule]
   ],
   providers: [TvmazeService],
   bootstrap: [AppComponent]

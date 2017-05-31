@@ -1,28 +1,21 @@
 <md-toolbar color="primary">
-  Angular Material2 Example App
+  MovieSearch
+  <md-input-container>
+    <input mdInput type="search" [(ngModel)]="searchKey" (keyup.enter)="DoSearch()" placeholder="Entrez votre recherche" [ngModelOptions]="{standalone: true}"/>
 
-  <span class="app-toolbar-filler"></span>
-
+    <button md-raised-button (click)="DoSearch()"> Rechercher </button>
+  </md-input-container>
 </md-toolbar>
 
-<header>
-  <form id="searchForm" method="post">
-    <input id="s" [(ngModel)]="searchKey" (keyup.enter)="DoSearch()" placeholder="Type here..." [ngModelOptions]="{standalone: true}"/>
-    <button (click)="DoSearch()"> Find </button>
-  </form>
-</header>
 
-<ul>
-  <li *ngFor="let oneData of getData">
-    <div class="background-search" *ngIf="oneData.show.id">
-      <div class="imageData">
-        <img class="oneDataImage" src="{{oneData.show.image.medium}}">
-      </div>
-      <div class="oneDataInfo">
-        <h2 id="{{oneData.show.id}}">{{oneData.show.name}}</h2>
-        <span *ngIf="oneData.show.rating.average">Note: {{oneData.show.rating.average}}</span>
-        <div>{{oneData.show.summary }}</div>
-      </div>
-    </div>
-  </li>
-</ul>
+
+
+  <md-card *ngFor="let oneData of getData">
+   <md-grid-list cols="2" rowHeight="4:1">
+     <md-grid-tile><img md-card-image class="oneDataImage" src="{{oneData.show.image.medium}}"></md-grid-tile>
+     <md-grid-tile>
+       <md-card-title id="{{oneData.show.id}}">{{oneData.show.name}}</md-card-title>
+       <md-card-content>{{oneData.show.summary }}</md-card-content>
+       <md-card-footer *ngIf="oneData.show.rating.average">Note: {{oneData.show.rating.average}}</md-card-footer></md-grid-tile>
+   </md-grid-list>
+  </md-card>
