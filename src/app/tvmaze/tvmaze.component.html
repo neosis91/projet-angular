@@ -10,12 +10,27 @@
 
 
 
-  <md-card *ngFor="let oneData of getData">
-   <md-grid-list cols="2" rowHeight="4:1">
-     <md-grid-tile><img md-card-image class="oneDataImage" src="{{oneData.show.image.medium}}"></md-grid-tile>
-     <md-grid-tile>
-       <md-card-title id="{{oneData.show.id}}">{{oneData.show.name}}</md-card-title>
-       <md-card-content>{{oneData.show.summary }}</md-card-content>
-       <md-card-footer *ngIf="oneData.show.rating.average">Note: {{oneData.show.rating.average}}</md-card-footer></md-grid-tile>
-   </md-grid-list>
-  </md-card>
+
+<md-grid-list cols="2">
+  <md-grid-tile
+    *ngFor="let oneData of getData"
+    [colspan]="1">
+    <md-card class="card-search">
+      <md-card-header>
+        <md-card-title id="{{oneData.show.id}}"><h2>{{oneData.show.name}}</h2></md-card-title>
+        <md-card-subtitle *ngIf="oneData.show.rating.average">Note: {{oneData.show.rating.average}}</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image class="oneDataImage" src="{{oneData.show.image.medium}}">
+      <md-card-content>
+        <p [innerHTML]="oneData.show.summary"></p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-raised-button>TRADUIRE</button>
+      </md-card-actions>
+    </md-card>
+  </md-grid-tile>
+</md-grid-list>
+
+
+
+

@@ -1,2 +1,13 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+.card-search{
+  width:400px;
+  margin:0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .card-search{
+    width:100%;
+    margin:0 auto;
+  }
+}
