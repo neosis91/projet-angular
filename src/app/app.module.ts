@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { TvmazeService } from './tvmaze.service';
 import { HttpTestComponent } from './http-test/http-test.component';
 import { TvmazeComponent } from './tvmaze/tvmaze.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdButtonModule, MdToolbarModule} from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { TvmazeComponent } from './tvmaze/tvmaze.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    [BrowserAnimationsModule],
+    [MdButtonModule, MdToolbarModule]
   ],
   providers: [TvmazeService],
   bootstrap: [AppComponent]
