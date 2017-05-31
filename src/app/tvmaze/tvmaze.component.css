@@ -1,13 +1,27 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 .card-search{
-  width:400px;
+  width:1000px;
   margin:0 auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+img{
+  width: 20%;
+  margin:0 auto;
+  padding-top: 15px;
 }
 
+.center-image {
+  text-align: center;
+}
 @media only screen and (max-width: 768px) {
   .card-search{
     width:100%;
+    margin:0 auto;
+  }
+  img{
+    width: 70%;
     margin:0 auto;
   }
 }
