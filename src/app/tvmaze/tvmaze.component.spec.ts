@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TvmazeComponent } from './tvmaze.component';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 describe('TvmazeComponent', () => {
   let component: TvmazeComponent;
@@ -8,6 +10,7 @@ describe('TvmazeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ FormsModule, HttpModule ],
       declarations: [ TvmazeComponent ]
     })
     .compileComponents();
@@ -19,7 +22,7 @@ describe('TvmazeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('should be created TVMazeComponent', () => {
     expect(component).toBeTruthy();
   });
 });
