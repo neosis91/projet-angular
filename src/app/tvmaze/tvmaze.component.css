@@ -15,6 +15,10 @@ img{
 .center-image {
   text-align: center;
 }
+
+input {
+  color: black;
+}
 @media only screen and (max-width: 768px) {
   .card-search{
     width:100%;
