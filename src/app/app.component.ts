@@ -11,7 +11,10 @@ import { OnInit } from '@angular/core';
 
 export class AppComponent implements OnInit {
   getDataSchedule: void;
-
+  programHidden: any = false;
+  onUpdate(state: boolean) {  
+    this.programHidden = state;
+  }
   constructor(private _TvmazeService: TvmazeService) {
   }
 

@@ -1,6 +1,6 @@
-<app-tvmaze></app-tvmaze>
+<app-tvmaze (isSearching)="onUpdate($event)"></app-tvmaze>
 
-<div class="homePage">
+<div class="homePage" [hidden]="programHidden">
   <md-card *ngFor="let oneDataSchedule of getDataSchedule" class="card-schedule">
     <div class="center-image">
       <img md-card-image class="oneDataImage" src="{{oneDataSchedule.show.image.medium}}">
