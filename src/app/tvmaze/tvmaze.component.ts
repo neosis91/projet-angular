@@ -4,6 +4,7 @@ import {TvmazeService} from '../tvmaze.service';
 // import du service de traduction
 import {TranslateService} from '../translate.service';
 import { Location } from '@angular/common';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-tvmaze',
@@ -18,7 +19,8 @@ export class TvmazeComponent  {
   searchKey: string;
   @Output() isSearching = new EventEmitter<boolean>();
 
-  constructor(private _TvmazeService: TvmazeService, private _TranslateService: TranslateService, private location: Location) {
+  constructor(public auth: AuthService, private _TvmazeService: TvmazeService, private _TranslateService: TranslateService, private location: Location) {
+      auth.handleAuthentication();
   }
  // Methode traduction du texte
   translateText(element) {
