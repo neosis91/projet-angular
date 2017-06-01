@@ -27,4 +27,8 @@ describe('TvmazeComponent', () => {
   it('should be created TVMazeComponent', () => {
     expect(component).toBeTruthy();
   });
+
+  it('DoSearch', () =>{
+
+  });
 });

@@ -15,11 +15,16 @@ export class TvmazeService {
   }
   getSchedule() {
 
-    const dateToday = new Date().toJSON().slice(0, 10);
-    const url = 'http://api.tvmaze.com/schedule?date=' + dateToday;
-    console.log('url: ' + url);
-    return this._http.get(url)
-      .map((res: Response) => res.json())
-      .catch((error: any) => Observable.throw('Server error'));
+      const dateToday = new Date().toJSON().slice(0, 10);
+      const url = 'http://api.tvmaze.com/schedule?date=' + dateToday;
+      console.log('url: ' + url);
+      return this._http.get(url)
+          .map((res:Response) => res.json())
+          .catch((error:any) => Observable.throw('Server error'));
+  }
+
+  SearchMovieTesting(searchKey: string): Observable<Response> {
+    const url = 'http://api.tvmaze.com/search/shows?q=' + searchKey;
+    return this._http.get(url);
   }
 }

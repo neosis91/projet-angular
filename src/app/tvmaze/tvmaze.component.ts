@@ -20,7 +20,7 @@ export class TvmazeComponent  {
   }
  // Methode traduction du texte
   translateText(desc, eid) {
-    const elem = document.getElementById(eid).parentElement.parentElement.parentElement.getElementsByTagName('p')[0];
+    const elem = document.getElementById(eid).parentElement.parentElement.parentElement.getElementsByClassName('text-translate')[0];
     this._TranslateService.getTranslation(desc)
         .subscribe(
             data => elem.innerHTML = data.text,

@@ -9,7 +9,7 @@ import { OnInit } from '@angular/core';
   providers: [TvmazeService]
 })
 
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   getDataSchedule: void;
 
   constructor(private _TvmazeService: TvmazeService) {
