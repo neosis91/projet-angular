@@ -11,7 +11,6 @@ import {TranslateService} from '../translate.service';
 export class TvmazeComponent  {
   getData: string;
   searchKey: string;
-  summaryTranslation: string;
 
   constructor(private _TvmazeService: TvmazeService, private _TranslateService: TranslateService) {
   }
@@ -30,7 +29,7 @@ export class TvmazeComponent  {
         .subscribe(
             data => elem.innerHTML = data.text,
             error => alert(error),
-            () => console.log('success Ts')
+            () => console.log('Text translated with success')
         );
   }
   DoSearch() {
