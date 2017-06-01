@@ -1,1 +1,23 @@
 <app-tvmaze></app-tvmaze>
+
+<div class="homePage">
+  <md-card *ngFor="let oneDataSchedule of getDataSchedule" class="card-schedule">
+    <div class="center-image">
+      <img md-card-image class="oneDataImage" src="{{oneDataSchedule.show.image.medium}}">
+    </div>
+    <md-card-header>
+      <md-card-title id="{{oneDataSchedule.show.id}}"><h2>{{oneDataSchedule.show.name}}</h2></md-card-title>
+      <md-card-subtitle *ngIf="oneDataSchedule.airstamp">Diffusé le : {{oneDataSchedule.airstamp | date:'medium'}}</md-card-subtitle>
+      <md-card-subtitle *ngIf="oneDataSchedule.show.rating.average">Diffusé le : {{oneDataSchedule.show.rating.average}}</md-card-subtitle>
+    </md-card-header>
+  </md-card>
+</div>
+
+
+
+
+
+
+
+
+

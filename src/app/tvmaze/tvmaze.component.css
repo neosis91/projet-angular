@@ -11,6 +11,9 @@ img{
   margin:0 auto;
   padding-top: 15px;
 }
+.moreDetails{
+  text-align: center;
+}
 
 .center-image {
   text-align: center;
@@ -25,3 +28,6 @@ img{
     margin:0 auto;
   }
 }
+
+
+

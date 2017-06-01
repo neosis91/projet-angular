@@ -1,0 +1,48 @@
+.homePage{
+  width: 950px;
+  margin: 0 auto;
+}
+
+.card-schedule{
+  width: 185px;
+  float: left;
+  height:470px;
+}
+
+h2{
+  font-size:1em;
+}
+
+@media only screen and (max-width: 950px) {
+  .homePage{
+    width: 90%;
+    margin:0 auto;
+  }
+
+  .card-schedule{
+    width: 17%;
+    float: left;
+    height:350px;
+  }
+
+  h2{
+    font-size:1em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .homePage{
+    width: 90%;
+    margin:0 auto;
+    margin-top: 50px;
+  }
+  .card-schedule{
+    width: 100%;
+    float: left;
+    height:auto;
+  }
+  md-card{
+    padding:0;
+    margin-bottom:50px;
+  }
+}
