@@ -25,12 +25,10 @@ export class TvmazeComponent  {
   }
 
   translateText(desc, eid) {
-    let elem = document.getElementById(eid).parentElement.parentElement.parentElement.getElementsByTagName('p');
-    console.log(elem);
+    const elem = document.getElementById(eid).parentElement.parentElement.parentElement.getElementsByTagName('p')[0];
     this._TranslateService.getTranslation(desc)
         .subscribe(
-            data => function(){
-            },
+            data => elem.innerHTML = data.text,
             error => alert(error),
             () => console.log('success Ts')
         );
