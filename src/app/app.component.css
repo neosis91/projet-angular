@@ -1,6 +1,7 @@
 .homePage{
   width: 950px;
   margin: 0 auto;
+  z-index:1;
 }
 
 .card-schedule{
@@ -12,6 +13,27 @@
 h2{
   font-size:1em;
 }
+.pagination-bar {
+
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+li{
+  text-decoration: none;
+  list-style-type: none;
+  float: left;
+  display: inline-block;
+}
 
 @media only screen and (max-width: 950px) {
   .homePage{
@@ -22,7 +44,7 @@ h2{
   .card-schedule{
     width: 17%;
     float: left;
-    height:350px;
+    height:450px;
   }
 
   h2{
