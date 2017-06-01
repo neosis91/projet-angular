@@ -30,6 +30,6 @@ describe('AppComponent', () => {
   it(`should have as title 'app works!'`, async(() => {
     fixture = TestBed.createComponent(AppComponent);
     app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app works!');
+    expect(app.title).toEqual('Movie Search');
   }));
 });
