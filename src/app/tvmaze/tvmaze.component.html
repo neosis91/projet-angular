@@ -7,43 +7,43 @@
   </md-input-container>
 </md-toolbar>
 
-<md-card *ngFor="let oneData of getData" class="card-search">
+<div class="div-search" [ngClass]="{'':getData === null, 'cache-div-search': getData !== null}">
+  <div class="div-search-scroll">
+    <md-card *ngFor="let oneData of getData" class="card-search">
 
-    <div class="center-image" *ngIf="oneData.show.image != null">
-      <img md-card-image class="oneDataImage" src="{{oneData.show.image.medium}}">
-    </div>
-    <md-card-header>
-      <md-card-title id="{{oneData.show.id}}"><h2>{{oneData.show.name}}</h2></md-card-title>
-      <md-card-subtitle *ngIf="oneData.show.rating.average">Note: {{oneData.show.rating.average}}</md-card-subtitle>
-    </md-card-header>
+      <div class="center-image" *ngIf="oneData.show.image != null">
+        <img md-card-image class="oneDataImage" src="{{oneData.show.image.medium}}">
+      </div>
+      <md-card-header>
+        <md-card-title id="{{oneData.show.id}}"><h2>{{oneData.show.name}}</h2></md-card-title>
+        <md-card-subtitle *ngIf="oneData.show.rating.average">Note: {{oneData.show.rating.average}}</md-card-subtitle>
+      </md-card-header>
 
-    <md-card-content>
-      <p [innerHTML]="oneData.show.summary"></p>
+      <md-card-content>
+        <p [innerHTML]="oneData.show.summary"></p>
+      </md-card-content>
+      <md-card-actions>
+        <section class="moreDetails">
+          Afficher plus de détails <md-checkbox [(ngModel)]="oneData.show.id"></md-checkbox>
+        </section>
+      </md-card-actions>
+      <md-card-content>
+        <p *ngIf="!oneData.show.id">
+          Durée moyenne: {{oneData.show.runtime}}
+        </p>
+      </md-card-content> <md-card-content>
+      <p *ngIf="!oneData.show.id">
+        Sorti le:{{oneData.show.premiered | date:'medium'}}
+      </p>
+    </md-card-content> <md-card-content>
+      <p *ngIf="!oneData.show.id">
+        {{oneData.show.language}}
+      </p>
     </md-card-content>
-  <md-card-actions>
-    <section class="moreDetails">
-      Afficher plus de détails <md-checkbox [(ngModel)]="oneData.show.id"></md-checkbox>
-    </section>
-  </md-card-actions>
-  <md-card-content>
-    <p *ngIf="!oneData.show.id">
-      Durée moyenne: {{oneData.show.runtime}}
-    </p>
-  </md-card-content> <md-card-content>
-  <p *ngIf="!oneData.show.id">
-    Sorti le:{{oneData.show.premiered | date:'medium'}}
-  </p>
-</md-card-content> <md-card-content>
-  <p *ngIf="!oneData.show.id">
-    {{oneData.show.language}}
-  </p>
-</md-card-content>
-    <md-card-actions>
+      <md-card-actions>
         <button md-raised-button *ngIf="oneData.show.summary" (click)="translateText(oneData.show.summary,oneData.show.id)">TRADUIRE</button>
-    </md-card-actions>
+      </md-card-actions>
 
-</md-card>
-
-
-
-
+    </md-card>
+  </div>
+</div>

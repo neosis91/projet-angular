@@ -1,6 +1,7 @@
 .homePage{
   width: 950px;
   margin: 0 auto;
+  z-index:1;
 }
 
 .card-schedule{
@@ -22,7 +23,7 @@ h2{
   .card-schedule{
     width: 17%;
     float: left;
-    height:350px;
+    height:400px;
   }
 
   h2{
