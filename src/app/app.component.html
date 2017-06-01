@@ -1,6 +1,7 @@
 <app-tvmaze></app-tvmaze>
 
-<div class="homePage">
+<div class="homePage clearfix">
+  <!--
   <md-card *ngFor="let oneDataSchedule of getDataSchedule" class="card-schedule">
     <div class="center-image">
       <img md-card-image class="oneDataImage" src="{{oneDataSchedule.show.image.medium}}">
@@ -13,8 +14,42 @@
       <md-card-subtitle *ngIf="oneDataSchedule.show.network.country">Pays : {{oneDataSchedule.show.network.country.name}}</md-card-subtitle>
     </md-card-header>
   </md-card>
+  -->
+  <!-- items being paged -->
+  <!--<div *ngFor="let item of pagedItems">{{item.name}}</div> -->
+  <md-card *ngFor="let oneDataSchedule of pagedItems" class="card-schedule">
+    <div class="center-image">
+      <img md-card-image class="oneDataImage" src="{{oneDataSchedule.show.image.medium}}">
+    </div>
+    <md-card-header>
+      <md-card-title id="{{oneDataSchedule.show.id}}"><h2>{{oneDataSchedule.show.name}}</h2></md-card-title>
+      <md-card-subtitle *ngIf="oneDataSchedule.airstamp">Diffusé le : {{oneDataSchedule.airstamp | date:'medium'}}</md-card-subtitle>
+      <md-card-subtitle *ngIf="oneDataSchedule.show.rating.average">Note : {{oneDataSchedule.show.rating.average}}</md-card-subtitle>
+      <md-card-subtitle *ngIf="oneDataSchedule.show.network.name">Chaine : {{oneDataSchedule.show.network.name}}</md-card-subtitle>
+      <md-card-subtitle *ngIf="oneDataSchedule.show.network.country">Pays : {{oneDataSchedule.show.network.country.name}}</md-card-subtitle>
+    </md-card-header>
+  </md-card>
 </div>
-
+  <!-- pager -->
+<div class="pagination-bar clearfix">
+  <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+    <li [ngClass]="{disabled:pager.currentPage === 1}">
+      <a (click)="setPage(1)">First</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === 1}">
+      <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+    </li>
+    <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+      <a (click)="setPage(page)">{{page}}</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+      <a (click)="setPage(pager.currentPage + 1)">Next</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+      <a (click)="setPage(pager.totalPages)">Last</a>
+    </li>
+  </ul>
+</div>
 
 
 

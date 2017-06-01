@@ -13,6 +13,27 @@
 h2{
   font-size:1em;
 }
+.pagination-bar {
+
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+li{
+  text-decoration: none;
+  list-style-type: none;
+  float: left;
+  display: inline-block;
+}
 
 @media only screen and (max-width: 950px) {
   .homePage{
