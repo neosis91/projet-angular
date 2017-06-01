@@ -22,7 +22,7 @@
       <p [innerHTML]="oneData.show.summary"></p>
     </md-card-content>
     <md-card-actions>
-        <button md-raised-button (click)="translateText(oneData.show.summary,oneData.show.id)">TRADUIRE</button>
+        <button md-raised-button *ngIf="oneData.show.summary" (click)="translateText(oneData.show.summary,oneData.show.id)">TRADUIRE</button>
     </md-card-actions>
 
 </md-card>
