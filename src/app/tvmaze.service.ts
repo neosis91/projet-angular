@@ -6,13 +6,7 @@ import { Observable } from 'rxjs/Rx';
 export class TvmazeService {
 
   constructor(private _http: Http) { }
-
-  getQueryShow(recherche) {
-    const url = 'http://api.tvmaze.com/search/shows?q=' + recherche;
-    return this._http.get(url)
-      .map((res: Response) => res.json())
-      .catch((error: any) => Observable.throw('Server error'));
-  }
+  // méthode faisant appel a l'api TVmaze (POST)
   SearchMovie(searchKey: string) {
     const url = 'http://api.tvmaze.com/search/shows?q=' + searchKey;
     return this._http.get(url)

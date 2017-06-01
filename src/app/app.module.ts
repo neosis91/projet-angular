@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TvmazeService } from './tvmaze.service';
 import { TvmazeComponent } from './tvmaze/tvmaze.component';
+// import des styles Material Design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdToolbarModule, MdInputModule, MdCardModule, MdGridListModule} from '@angular/material';
 
