@@ -5,8 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TvmazeService } from './tvmaze.service';
-import { HttpTestComponent } from './http-test/http-test.component';
 import { TvmazeComponent } from './tvmaze/tvmaze.component';
+// import des styles Material Design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdToolbarModule, MdInputModule, MdCardModule, MdGridListModule, MdCheckboxModule} from '@angular/material';
 
@@ -14,7 +14,6 @@ import {MdButtonModule, MdToolbarModule, MdInputModule, MdCardModule, MdGridList
 @NgModule({
   declarations: [
     AppComponent,
-    HttpTestComponent,
     TvmazeComponent
   ],
   imports: [

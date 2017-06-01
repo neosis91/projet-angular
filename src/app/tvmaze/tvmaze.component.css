@@ -18,6 +18,15 @@ img{
 .center-image {
   text-align: center;
 }
+
+input {
+  color: white;
+  height: 30px;
+}
+
+.padding-fix{
+  padding-right: 20px;
+}
 @media only screen and (max-width: 768px) {
   .card-search{
     width:100%;

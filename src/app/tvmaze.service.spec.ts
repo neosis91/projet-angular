@@ -1,10 +1,11 @@
 import { TestBed, inject } from '@angular/core/testing';
-
+import { HttpModule } from '@angular/http';
 import { TvmazeService } from './tvmaze.service';
 
 describe('TvmazeService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [ HttpModule ],
       providers: [TvmazeService]
     });
   });

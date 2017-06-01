@@ -8,6 +8,7 @@ import { OnInit } from '@angular/core';
   styleUrls: ['./app.component.css'],
   providers: [TvmazeService]
 })
+
 export class AppComponent implements OnInit{
   getDataSchedule: void;
 
@@ -24,7 +25,4 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.getDataSchedule = this.getSchedule();
   }
-
-
-
 }
