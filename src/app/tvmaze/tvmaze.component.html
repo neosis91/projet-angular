@@ -1,8 +1,8 @@
 <md-toolbar color="primary">
-  MovieSearch
-  <md-input-container>
-    <input mdInput type="search" [(ngModel)]="searchKey" (keyup.enter)="DoSearch()" placeholder="Entrez votre recherche" [ngModelOptions]="{standalone: true}"/>
+  <span class="padding-fix">MovieSearch</span>
 
+  <md-input-container>
+    <input mdInput type="search" [(ngModel)]="searchKey" (keyup.enter)="DoSearch()" [ngModelOptions]="{standalone: true}"/>
     <button md-raised-button (click)="DoSearch()"> Rechercher </button>
   </md-input-container>
 </md-toolbar>
