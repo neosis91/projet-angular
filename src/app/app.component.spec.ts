@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { TvmazeComponent } from './tvmaze/tvmaze.component';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import {MdButtonModule, MdToolbarModule, MdInputModule, MdCardModule, MdGridListModule} from '@angular/material';
+
 describe('AppComponent', () => {
 
   let fixture: ComponentFixture<AppComponent>;
@@ -11,7 +13,7 @@ describe('AppComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-        imports: [ FormsModule, HttpModule ],
+        imports: [ FormsModule, HttpModule,  [MdButtonModule, MdToolbarModule, MdInputModule, MdCardModule, MdGridListModule],  ],
       declarations: [
         AppComponent,
           TvmazeComponent
