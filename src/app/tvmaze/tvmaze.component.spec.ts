@@ -5,6 +5,9 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import {MdButtonModule, MdToolbarModule, MdInputModule, MdCardModule, MdGridListModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AuthService} from "../auth/auth.service";
+import { RouterModule } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('TvmazeComponent', () => {
   let component: TvmazeComponent;
@@ -12,8 +15,11 @@ describe('TvmazeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ FormsModule, HttpModule, [MdButtonModule, MdToolbarModule, MdInputModule, MdCardModule, MdGridListModule], [BrowserAnimationsModule] ],
-      declarations: [ TvmazeComponent ]
+      imports: [ RouterTestingModule, RouterModule, FormsModule, HttpModule, [MdButtonModule, MdToolbarModule, MdInputModule, MdCardModule, MdGridListModule], [BrowserAnimationsModule] ],
+      declarations: [ TvmazeComponent ],
+      providers: [
+        AuthService
+      ]
     })
     .compileComponents();
   }));

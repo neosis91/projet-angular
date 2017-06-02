@@ -12,4 +12,9 @@ describe('PagerService', () => {
   it('should be created', inject([PagerService], (service: PagerService) => {
     expect(service).toBeTruthy();
   }));
+
+  it('should be created', inject([PagerService], (service: PagerService) => {
+    expect(service).toBeTruthy();
+  }));
+
 });
