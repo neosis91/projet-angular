@@ -31,7 +31,7 @@
   </md-card>
 </div>
   <!-- pager -->
-<div class="pagination-bar clearfix">
+<div class="pagination-bar clearfix" [hidden]="programHidden">
   <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
     <li [ngClass]="{disabled:pager.currentPage === 1}">
       <a (click)="setPage(1)">Premier</a>
