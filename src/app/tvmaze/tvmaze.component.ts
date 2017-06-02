@@ -3,6 +3,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import {TvmazeService} from '../tvmaze.service';
 // import du service de traduction
 import {TranslateService} from '../translate.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-tvmaze',
@@ -17,7 +18,7 @@ export class TvmazeComponent  {
   searchKey: string;
   @Output() isSearching = new EventEmitter<boolean>();
 
-  constructor(private _TvmazeService: TvmazeService, private _TranslateService: TranslateService) {
+  constructor(private _TvmazeService: TvmazeService, private _TranslateService: TranslateService, private location: Location) {
   }
  // Methode traduction du texte
   translateText(element) {
@@ -41,5 +42,8 @@ export class TvmazeComponent  {
         error => alert(error),
         () => console.log('success')
     );
+  }
+  goBack(): void {
+    this.location.back();
   }
 }
