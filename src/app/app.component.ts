@@ -3,7 +3,7 @@ import {TvmazeService} from './tvmaze.service';
 import { OnInit } from '@angular/core';
 
 import { PagerService } from './pager.service';
-import {AuthService} from "./auth/auth.service";
+import {AuthService} from './auth/auth.service';
 
 @Component({
   selector: 'app-root',

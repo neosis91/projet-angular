@@ -1,12 +1,17 @@
 <md-toolbar color="primary">
-  <span class="padding-fix">MovieSearch</span>
-  <md-input-container>
+  <a routerLink="/home"><span class="padding-fix">MovieSearch</span></a>
     <div style="float: right">
       <button
               class="btn btn-primary btn-margin"
               *ngIf="!auth.isAuthenticated()"
               (click)="auth.login()">
         Log In
+      </button>
+      <button
+              class="btn btn-primary btn-margin"
+              *ngIf="auth.isAuthenticated()"
+              routerLink="/search">
+        Search
       </button>
       <button
               class="btn btn-primary btn-margin"
@@ -21,7 +26,6 @@
         Log Out
       </button>
     </div>
-  </md-input-container>
 </md-toolbar>
 <main class="container">
   <router-outlet></router-outlet>

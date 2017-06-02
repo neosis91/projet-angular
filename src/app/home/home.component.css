@@ -1,0 +1,127 @@
+.homePage{
+    width: 1012px;
+    margin: 0 auto;
+    z-index: 1;
+    margin-top: 80px;
+}
+
+.mat-card{
+    background-color: #fff;
+}
+
+.card-schedule{
+    width: 185px;
+    float: left;
+    height:470px;
+    margin:10px;
+}
+
+h2{
+    font-size:1em;
+}
+.pagination-bar {
+    width: 935px;
+    margin: 30px auto;
+}
+
+.pagination {
+    padding:0;
+}
+
+.pagination a {
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a:hover{
+    background-color: #673ab7;
+    color: #fff !important;
+}
+
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
+
+li{
+    text-decoration: none;
+    list-style-type: none;
+    float: left;
+    display: inline-block;
+    border:1px solid #673ab7;
+    cursor: pointer;
+    color: #673ab7;
+    margin: 0 4px;
+    background-color: #fff;
+}
+
+li.active{
+    background-color: #673ab7;
+
+}
+
+li.active a{
+    color: #fff !important;
+}
+
+.pagination[_ngcontent-c0] a[_ngcontent-c0] {
+    color: #673ab7;
+}
+
+@media only screen and (max-width: 950px) {
+    .homePage{
+        width: 100%;
+        margin:0 auto;
+        margin-top: 80px;
+    }
+
+    .card-schedule{
+        width: 17%;
+        float: left;
+        height:450px;
+        margin:0.5%;
+    }
+
+    h2{
+        font-size:1em;
+    }
+
+    .pagination-bar {
+        width: 500px;
+    }
+
+    li{
+        margin: 6px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .homePage{
+        width: 100%;
+        margin:0 auto;
+        margin-top: 80px;
+    }
+    .card-schedule{
+        width: 100%;
+        float: left;
+        height:auto;
+        margin:0;
+    }
+    md-card{
+        padding:0;
+        margin-bottom:50px;
+    }
+
+    .pagination-bar {
+        width: 100%;
+    }
+    .mat-card-image {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .div-search-scroll{
+        margin-top: 0px;
+    }
+}
