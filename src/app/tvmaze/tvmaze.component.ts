@@ -34,14 +34,9 @@ export class TvmazeComponent implements OnInit {
             () => console.log('Text translated with success')
         );
   }
-  // Methode recherc
-  // he de film via l'input
+  // Methode recherche de film via l'input
   DoSearch() {
-    // if (this.searchKey !== '') {
-    //   this.isSearching.emit(true);
-    // } else {
-    //   this.isSearching.emit(false);
-    // }
+
     this._TvmazeService.SearchMovie(this.searchKey) .subscribe(
         data => this.getData = data,
         error => alert(error),
