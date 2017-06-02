@@ -3,11 +3,15 @@
         <h3>Profile</h3>
     </div>
     <div class="panel-body">
-        <img src="{{profile?.picture}}" class="avatar" alt="avatar">
-        <div>
-            <label><i class="glyphicon glyphicon-user"></i> Nickname</label>
-            <h3 class="nickname">{{ profile?.nickname }}</h3>
-        </div>
-        <pre class="full-profile">{{ profile | json }}</pre>
+        <md-card class="example-card">
+            <md-card-header>
+                <div md-card-avatar class="example-header-image"><img src="{{profile?.picture}}"></div>
+                <md-card-title><h1>{{ profile?.nickname }}</h1></md-card-title>
+                <md-card-subtitle>{{ profile?.sub }}</md-card-subtitle>
+                <md-card-subtitle>{{ profile?.gender }}</md-card-subtitle>
+                <md-card-subtitle>{{ profile?.locale }}</md-card-subtitle>
+                <md-card-subtitle>{{ profile?.updated_at }}</md-card-subtitle>
+            </md-card-header>
+        </md-card>
     </div>
 </div>
