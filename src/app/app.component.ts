@@ -1,3 +1,4 @@
+///<reference path="auth/auth.service.ts"/>
 import { Component } from '@angular/core';
 import {TvmazeService} from './tvmaze.service';
 import { OnInit } from '@angular/core';
@@ -14,16 +15,19 @@ import {AuthService} from './auth/auth.service';
 
 export class AppComponent implements OnInit {
   getDataSchedule: void;
-  programHidden: any = false;
+  profilePicture: string;
   private allItems: any[];
   pager: any = {};
   // paged items
   pagedItems: any[];
-  // Permet d'afficher ou non le programme
-  onUpdate(state: boolean) {this.programHidden = state;
-  }
   constructor(public auth: AuthService, private _TvmazeService: TvmazeService, private pagerService: PagerService) {
     auth.handleAuthentication();
+    if (this.auth.isAuthenticated()) {
+      this.auth.getProfile((err, profile) => {
+        this.profilePicture = profile.picture;
+      });
+    }
+
   }
   getSchedule() {
     this._TvmazeService.getSchedule().subscribe(

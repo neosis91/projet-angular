@@ -9,7 +9,6 @@ import { AuthService } from './../auth/auth.service';
 export class ProfileComponent implements OnInit {
 
     profile: any;
-    @Output() isProfile = new EventEmitter<boolean>();
     constructor(public auth: AuthService) { }
 
     ngOnInit() {

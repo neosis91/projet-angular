@@ -1,1 +1,6 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.toolbar-img {
+    float:right;
+    width:30px;
+}

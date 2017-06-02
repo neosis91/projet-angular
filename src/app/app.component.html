@@ -13,12 +13,12 @@
               routerLink="/search">
         Search
       </button>
-      <button
+      <a
               class="btn btn-primary btn-margin"
               *ngIf="auth.isAuthenticated()"
               routerLink="/profile">
-        Profile
-      </button>
+        <img class="toolbar-img" src="{{profilePicture}}"/>
+      </a>
       <button
               class="btn btn-primary btn-margin"
               *ngIf="auth.isAuthenticated()"
