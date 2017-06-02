@@ -76,6 +76,9 @@ input {
   margin: 50px;
 }
 
+.mat-input-container{
+  width: 475px;
+}
 
 input[_ngcontent-c3] {
   color: #673ab7;
@@ -90,6 +93,9 @@ input[_ngcontent-c3] {
   img{
     width: 70%;
     margin:0 auto;
+  }
+  .mat-input-container{
+    width: auto;
   }
 }
 
