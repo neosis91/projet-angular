@@ -1,31 +1,5 @@
-<md-toolbar color="primary">
-    <span class="padding-fix">MovieSearch</span>
-    <md-input-container>
-        <input mdInput type="search" [(ngModel)]="searchKey" (keyup.enter)="DoSearch()" [ngModelOptions]="{standalone: true}"/>
-        <button md-raised-button (click)="DoSearch()"> Rechercher </button>
-        <div style="float: right">
-            <button
-                    class="btn btn-primary btn-margin"
-                    *ngIf="!auth.isAuthenticated()"
-                    (click)="auth.login()">
-                Log In
-            </button>
-            <button
-                    class="btn btn-primary btn-margin"
-                    *ngIf="auth.isAuthenticated()"
-                    routerLink="/profile">
-                Profile
-            </button>
-            <button
-                    class="btn btn-primary btn-margin"
-                    *ngIf="auth.isAuthenticated()"
-                    (click)="auth.logout()">
-                Log Out
-            </button>
-        </div>
-    </md-input-container>
-</md-toolbar>
-
+<input mdInput type="search" [(ngModel)]="searchKey" (keyup.enter)="DoSearch()" [ngModelOptions]="{standalone: true}"/>
+<button md-raised-button (click)="DoSearch()"> Rechercher </button>
 <div class="div-search-scroll">
     <md-card *ngFor="let oneData of getData" class="card-search">
 

@@ -13,6 +13,7 @@ import { CallbackComponent } from './callback/callback.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdToolbarModule, MdInputModule, MdCardModule, MdGridListModule, MdCheckboxModule} from '@angular/material';
 import { ProfileComponent } from './profile/profile.component';
+import { HomeComponent } from './home/home.component';
 
 import { ROUTES } from './app.routes';
 
@@ -21,7 +22,8 @@ import { ROUTES } from './app.routes';
     AppComponent,
     TvmazeComponent,
     CallbackComponent,
-    ProfileComponent
+    ProfileComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import {TvmazeService} from './tvmaze.service';
 import { OnInit } from '@angular/core';
 
 import { PagerService } from './pager.service';
+import {AuthService} from "./auth/auth.service";
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ export class AppComponent implements OnInit {
   // Permet d'afficher ou non le programme
   onUpdate(state: boolean) {this.programHidden = state;
   }
-  constructor(private _TvmazeService: TvmazeService, private pagerService: PagerService) {
+  constructor(public auth: AuthService, private _TvmazeService: TvmazeService, private pagerService: PagerService) {
+    auth.handleAuthentication();
   }
   getSchedule() {
     this._TvmazeService.getSchedule().subscribe(
