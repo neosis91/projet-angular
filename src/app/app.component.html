@@ -1,15 +1,15 @@
 <md-toolbar color="primary">
   <a routerLink="/home"><span class="padding-fix">MovieSearch</span></a>
 
-  <div class="les-btn-desktop">
+  <div class="btn-decale">
     <button md-raised-button
-            class="btn btn-primary btn-margin"
+            class="btn btn-primary btn-margin les-btn-desktop"
             *ngIf="!auth.isAuthenticated()"
             (click)="auth.login()">
       Connexion
     </button>
     <button md-raised-button
-            class="btn btn-primary btn-margin"
+            class="btn btn-primary btn-margin les-btn-desktop"
             *ngIf="auth.isAuthenticated()"
             routerLink="/search">
       Recherche
@@ -21,7 +21,7 @@
       <img class="toolbar-img" src="{{profilePicture}}"/>
     </a>
     <button md-raised-button
-            class="btn btn-primary btn-margin"
+            class="btn btn-primary btn-margin les-btn-desktop"
             *ngIf="auth.isAuthenticated()"
             (click)="auth.logout()">
       Deconnexion
@@ -43,12 +43,6 @@
             routerLink="/search">
       Recherche
     </button>
-    <a
-            class="btn btn-primary btn-margin"
-            *ngIf="auth.isAuthenticated()"
-            routerLink="/profile">
-      <img class="toolbar-img" src="{{profilePicture}}"/>
-    </a>
     <button md-raised-button
             class="btn btn-primary btn-margin"
             *ngIf="auth.isAuthenticated()"
@@ -56,7 +50,6 @@
       Deconnexion
     </button>
   </div>
->>>>>>> 4168a46afd75accd30131d71d66e22b206cd4a25
 </md-toolbar>
 <main class="container">
   <router-outlet></router-outlet>
