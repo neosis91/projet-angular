@@ -47,5 +47,7 @@ export class AppComponent implements OnInit {
     this.pager = this.pagerService.getPager(this.allItems.length, page);
     // on recupere la page courante
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+    // retourne top de la page
+    window.scrollTo(0, 0);
   }
 }
