@@ -44,8 +44,6 @@ h2{
   zoom: 1;
 }
 
-
-
 li{
   text-decoration: none;
   list-style-type: none;
@@ -122,5 +120,8 @@ li.active a{
   .mat-card-image {
     width: 100% !important;
     margin: 0 !important;
+  }
+  .div-search-scroll{
+    margin-top: 0px;
   }
 }
