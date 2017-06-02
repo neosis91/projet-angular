@@ -47,8 +47,8 @@ export class HomeComponent implements OnInit {
 
         // get pager object from service
         this.pager = this.pagerService.getPager(this.allItems.length, page);
-
         // get current page of items
         this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+        window.scrollTo(0, 0);
     }
 }
