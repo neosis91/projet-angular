@@ -1,20 +1,17 @@
 <md-toolbar color="primary">
-  <div>
-    <a routerLink="/home"><span class="padding-fix">MovieSearch</span></a>
-  </div>
-  <br>
-  <div class="les-btn">
+  <a routerLink="/home"><span class="padding-fix">MovieSearch</span></a>
+  <div class="les-btn-desktop">
     <button md-raised-button
             class="btn btn-primary btn-margin"
             *ngIf="!auth.isAuthenticated()"
             (click)="auth.login()">
-      Log In
+      Connexion
     </button>
     <button md-raised-button
             class="btn btn-primary btn-margin"
             *ngIf="auth.isAuthenticated()"
             routerLink="/search">
-      Search
+      Recherche
     </button>
     <button md-raised-button
             class="btn btn-primary btn-margin"
@@ -26,7 +23,36 @@
             class="btn btn-primary btn-margin"
             *ngIf="auth.isAuthenticated()"
             (click)="auth.logout()">
-      Log Out
+      Deconnexion
+    </button>
+  </div>
+</md-toolbar>
+
+<md-toolbar color="primary" class="les-btn-mobile">
+  <div class="centrer-btn">
+    <button md-raised-button
+            class="btn btn-primary btn-margin"
+            *ngIf="!auth.isAuthenticated()"
+            (click)="auth.login()">
+      Connexion
+    </button>
+    <button md-raised-button
+            class="btn btn-primary btn-margin"
+            *ngIf="auth.isAuthenticated()"
+            routerLink="/search">
+      Recherche
+    </button>
+    <button md-raised-button
+            class="btn btn-primary btn-margin"
+            *ngIf="auth.isAuthenticated()"
+            routerLink="/profile">
+      Profile
+    </button>
+    <button md-raised-button
+            class="btn btn-primary btn-margin"
+            *ngIf="auth.isAuthenticated()"
+            (click)="auth.logout()">
+      Deconnexion
     </button>
   </div>
 </md-toolbar>

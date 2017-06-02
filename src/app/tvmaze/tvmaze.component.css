@@ -87,7 +87,7 @@ input[_ngcontent-c3] {
 
 @media only screen and (max-width: 768px) {
   .card-search{
-    width:100%;
+    width:80%;
     margin:0 auto;
   }
   img{
@@ -97,6 +97,10 @@ input[_ngcontent-c3] {
   .mat-input-container{
     width: auto;
   }
+  md-card.card-search.mat-card{
+    margin-bottom: 10px;
+  }
+
 }
 
 
