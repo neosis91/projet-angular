@@ -1,1 +1,9 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+.les-btn{
+  margin-left: 15px;
+}
