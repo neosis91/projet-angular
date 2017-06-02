@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { TvmazeService } from './tvmaze.service';
 import { TvmazeComponent } from './tvmaze/tvmaze.component';
 import { AuthService } from './auth/auth.service';
+import { ProfileService } from './profile/profile.service';
 import { CallbackComponent } from './callback/callback.component';
 
 // import des styles Material Design
@@ -34,7 +35,7 @@ import { ROUTES } from './app.routes';
     [MdButtonModule, MdToolbarModule, MdInputModule, MdCardModule, MdGridListModule, MdCheckboxModule],
     RouterModule.forRoot(ROUTES, { useHash: true })
   ],
-  providers: [TvmazeService,AuthService],
+  providers: [TvmazeService,AuthService, ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

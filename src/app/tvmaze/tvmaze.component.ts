@@ -5,12 +5,13 @@ import {TvmazeService} from '../tvmaze.service';
 import {TranslateService} from '../translate.service';
 import { Location } from '@angular/common';
 import { AuthService } from '../auth/auth.service';
+import { ProfileService } from '../profile/profile.service';
 
 @Component({
   selector: 'app-tvmaze',
   templateUrl: './tvmaze.component.html',
   styleUrls: ['./tvmaze.component.css'],
-  providers: [TvmazeService, TranslateService]
+  providers: [TvmazeService, TranslateService, ProfileService]
 })
 export class TvmazeComponent implements OnInit {
   // attribut permettant d'afficher la réponse
@@ -19,7 +20,7 @@ export class TvmazeComponent implements OnInit {
   searchKey: string;
   @Output() isSearching = new EventEmitter<boolean>();
 
-  constructor(public auth: AuthService, private _TvmazeService: TvmazeService, private _TranslateService: TranslateService, private location: Location) {
+  constructor(public auth: AuthService, private _TvmazeService: TvmazeService, private _TranslateService: TranslateService, private location: Location, private _ProfileService: ProfileService) {
       auth.handleAuthentication();
   }
   ngOnInit() {
@@ -45,5 +46,9 @@ export class TvmazeComponent implements OnInit {
   }
   goBack(): void {
     this.location.back();
+  }
+
+  addMovie(data){
+      this._ProfileService.addMovies(data);
   }
 }

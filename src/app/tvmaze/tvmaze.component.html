@@ -37,6 +37,7 @@
     </md-card-content>
       <md-card-actions>
         <button md-raised-button *ngIf="oneData.show.summary" (click)="translateText(oneData)">TRADUIRE</button>
+      <button md-raised-button *ngIf="oneData.show.id" (click)="addMovie(oneData)">Ajout</button>
       </md-card-actions>
     </md-card>
   <button class="btn-close" (click)="goBack()" md-fab><md-icon><i class="fa fa-reply" aria-hidden="true"></i></md-icon></button>

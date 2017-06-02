@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { AuthService } from './../auth/auth.service';
+import { ProfileService } from './../profile/profile.service';
 
 @Component({
     selector: 'app-profile',
@@ -9,7 +10,10 @@ import { AuthService } from './../auth/auth.service';
 export class ProfileComponent implements OnInit {
 
     profile: any;
-    constructor(public auth: AuthService) { }
+    movies: any;
+    constructor(public auth: AuthService, public _ProfileService: ProfileService) {
+        this.movies = this._ProfileService.movies;
+    }
 
     ngOnInit() {
         if (this.auth.userProfile) {
@@ -19,6 +23,6 @@ export class ProfileComponent implements OnInit {
                 this.profile = profile;
             });
         }
-    }
 
+    }
 }
