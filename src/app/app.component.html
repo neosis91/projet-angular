@@ -1,31 +1,62 @@
 <md-toolbar color="primary">
   <a routerLink="/home"><span class="padding-fix">MovieSearch</span></a>
-    <div style="float: right">
-      <button
-              class="btn btn-primary btn-margin"
-              *ngIf="!auth.isAuthenticated()"
-              (click)="auth.login()">
-        Log In
-      </button>
-      <button
-              class="btn btn-primary btn-margin"
-              *ngIf="auth.isAuthenticated()"
-              routerLink="/search">
-        Search
-      </button>
-      <a
-              class="btn btn-primary btn-margin"
-              *ngIf="auth.isAuthenticated()"
-              routerLink="/profile">
-        <img class="toolbar-img" src="{{profilePicture}}"/>
-      </a>
-      <button
-              class="btn btn-primary btn-margin"
-              *ngIf="auth.isAuthenticated()"
-              (click)="auth.logout()">
-        Log Out
-      </button>
-    </div>
+
+  <div class="les-btn-desktop">
+    <button md-raised-button
+            class="btn btn-primary btn-margin"
+            *ngIf="!auth.isAuthenticated()"
+            (click)="auth.login()">
+      Connexion
+    </button>
+    <button md-raised-button
+            class="btn btn-primary btn-margin"
+            *ngIf="auth.isAuthenticated()"
+            routerLink="/search">
+      Recherche
+    </button>
+    <a
+            class="btn btn-primary btn-margin"
+            *ngIf="auth.isAuthenticated()"
+            routerLink="/profile">
+      <img class="toolbar-img" src="{{profilePicture}}"/>
+    </a>
+    <button md-raised-button
+            class="btn btn-primary btn-margin"
+            *ngIf="auth.isAuthenticated()"
+            (click)="auth.logout()">
+      Deconnexion
+    </button>
+  </div>
+</md-toolbar>
+
+<md-toolbar color="primary" class="les-btn-mobile">
+  <div class="centrer-btn">
+    <button md-raised-button
+            class="btn btn-primary btn-margin"
+            *ngIf="!auth.isAuthenticated()"
+            (click)="auth.login()">
+      Connexion
+    </button>
+    <button md-raised-button
+            class="btn btn-primary btn-margin"
+            *ngIf="auth.isAuthenticated()"
+            routerLink="/search">
+      Recherche
+    </button>
+    <a
+            class="btn btn-primary btn-margin"
+            *ngIf="auth.isAuthenticated()"
+            routerLink="/profile">
+      <img class="toolbar-img" src="{{profilePicture}}"/>
+    </a>
+    <button md-raised-button
+            class="btn btn-primary btn-margin"
+            *ngIf="auth.isAuthenticated()"
+            (click)="auth.logout()">
+      Deconnexion
+    </button>
+  </div>
+>>>>>>> 4168a46afd75accd30131d71d66e22b206cd4a25
 </md-toolbar>
 <main class="container">
   <router-outlet></router-outlet>

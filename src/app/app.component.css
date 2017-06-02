@@ -1,6 +1,33 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 .toolbar-img {
-    float:right;
-    width:30px;
+  float: right;
+  width: 30px;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.les-btn-desktop{
+  margin-left: 15px;
+}
+
+.les-btn-mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .les-btn-desktop{
+    margin-left: 0;
+    display: none;
+  }
+  .les-btn-mobile{
+    display: block;
+  }
+  .centrer-btn{
+    margin: 0 auto;
+  }
 }

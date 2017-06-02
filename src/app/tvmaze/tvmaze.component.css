@@ -70,15 +70,37 @@ input {
 .mat-fab[_ngcontent-c3], .mat-mini-fab[_ngcontent-c3] {
   background-color: #673ab7;
 }
+
+.searchBarre{
+  text-align: center;
+  margin: 50px;
+}
+
+.mat-input-container{
+  width: 475px;
+}
+
+input[_ngcontent-c3] {
+  color: #673ab7;
+  height: 30px;
+}
+
 @media only screen and (max-width: 768px) {
   .card-search{
-    width:100%;
+    width:80%;
     margin:0 auto;
   }
   img{
     width: 70%;
     margin:0 auto;
   }
+  .mat-input-container{
+    width: auto;
+  }
+  md-card.card-search.mat-card{
+    margin-bottom: 10px;
+  }
+
 }
 
 
